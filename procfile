@@ -1,1 +1,1 @@
-web: gunicorn <pe_ovacenter>.wsgi --archivo-de-registro -
+web: gunicorn pe_ovacenter.wsgi --archivo-de-registro -
