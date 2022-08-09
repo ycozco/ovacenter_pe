@@ -41,11 +41,6 @@ if not IS_HEROKU:
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-^-84&auaxzc)6po_le%m15j=)$(qny+^2onh7_vfzg7iu25%j%'
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 
 # Application definition
 
