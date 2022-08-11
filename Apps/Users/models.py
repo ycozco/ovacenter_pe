@@ -19,7 +19,7 @@ class Cliente(models.Model):
 class ClienteSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Cliente
-        fields = ['CliNom', 'CliEma']
+        fields = ['CliCode','CliNom', 'CliEma', 'CliPas', 'CliNumTel','CliNumDoc','CliFecCum']
 class Instructor(models.Model):
     InsCod = models.CharField(max_length=100)
     InsNom = models.CharField(max_length=100)
@@ -31,3 +31,8 @@ class Instructor(models.Model):
     InsFecCum = models.CharField(max_length=100)
     InsHueDig = models.CharField(max_length=100)
     InsFecIni = models.CharField(max_length=100)
+
+class InstructorSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Instructor
+        fields = ['InsCod','InsNom','InsEma','InsPas'] 
