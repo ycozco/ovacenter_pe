@@ -1,5 +1,5 @@
 from django.db import models
-
+from rest_framework import serializers
 # Create your models here.
 
 class Cliente(models.Model):
@@ -16,6 +16,10 @@ class Cliente(models.Model):
     CliMemIni = models.CharField(max_length=100)
     CliMemFin = models.CharField(max_length=100)
 
+class ClienteSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Cliente
+        fields = ['CliNom', 'CliEma']
 class Instructor(models.Model):
     InsCod = models.CharField(max_length=100)
     InsNom = models.CharField(max_length=100)
