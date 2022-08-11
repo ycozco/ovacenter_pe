@@ -65,6 +65,24 @@
 </tdbody>
 </table>
 
-## SOLUCION Y RESULTADOS
+## Solucion y Resultados
 
+El Programa constra de las principales urls
 
+```
+router.register(r'cliente', ClienteViewSet)
+router.register(r'instructor', InstructorViewSet)
+urlpatterns = [
+    path('datos' ,Inicio, name = "inicio"),
+    path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('ovagym/', include('ovagym.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+```
+
+donde datos(http://127.0.0.1:8000/datos) corresponde a los datos que se obtiene de la api rest
+quedanto inicialmente de la siguiente manera:
+![](imagenes/imagen1)
+
+para luego de apretar los botones de mostrar tanto de clientes como de instructor asincronamente nos muestra los nombres requeridos
+[](imagenes/imagen2)
