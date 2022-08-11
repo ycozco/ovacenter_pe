@@ -10,17 +10,57 @@
         console.log("ready!");
 
         var dt = new Date();
-        var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
-        
-        $('#jqueryDate').text(dt);
-        $('#jqueryTime').text(time);
+        var time =
+          dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
 
-    });
+        $("#jqueryDate").text(dt);
+        $("#jqueryTime").text(time);
+
+        $("#jqueryGetClientes").click(function () {
+          let url = "http://127.0.0.1:8000/cliente/";
+          fetch(url)
+            .then((res) => res.json())
+            .then((out) => {
+              $("#clientes").text(out);
+              var datos = "";
+              console.log(out)
+              for (let i = 0; i < out.length; i++) {
+                datos += out[i].CliNom + "  ";
+              }
+              $("#clientes").text(datos);
+            })
+            .catch((err) => {
+              throw err;
+            });
+        });
+
+        $("#jqueryGetInstructores").click(function () {
+          let url = "http://127.0.0.1:8000/instructor/";
+          fetch(url)
+            .then((res) => res.json())
+            .then((out) => {
+              $("#users").text(out);
+              console.log(out);
+              var datos = "";
+              for (let i = 0; i < out.length; i++) {
+                datos += out[i].InsNom + "  ";
+              }
+              $("#instructores").text(datos);
+            })
+            .catch((err) => {
+              throw err;
+            });
+        });
+      });
     </script>
   </head>
   <body>
     <p id="jqueryTime"></p>
     <p id="jqueryDate"></p>
     <!-- page content -->
+    <button type="button" id="jqueryGetClientes">Obtener lista de Clientes</button>
+    <p id="clientes"></p>
+    <button type="button" id="jqueryGetInstructores">Obtener lista de instructores</button>
+    <p id="instructores"></p>
   </body>
 </html>
