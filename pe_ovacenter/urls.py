@@ -26,8 +26,8 @@ router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
 
 urlpatterns = [
-    path('' ,Inicio, name = "inicio"),
-    path('api', include(router.urls)),
+    path('cliente/' ,Inicio, name = "inicio"),
+    path('api/', include(router.urls)),
     path('admin/', admin.site.urls),
     path('ovagym/', include('ovagym.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
