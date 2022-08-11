@@ -19,15 +19,15 @@ from django.urls import path, include
 
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from Apps.Users.views import ClienteViewSet
+from Apps.Users.views import ClienteViewSet,InstructorViewSet
 from inicio.views import Inicio
 
 router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
-
+router.register(r'instructor', InstructorViewSet)
 urlpatterns = [
-    path('cliente/' ,Inicio, name = "inicio"),
-    path('api/', include(router.urls)),
+    path('datos' ,Inicio, name = "inicio"),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('ovagym/', include('ovagym.urls')),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
