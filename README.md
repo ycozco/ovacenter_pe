@@ -82,7 +82,11 @@ urlpatterns = [
 
 donde datos(http://127.0.0.1:8000/datos) corresponde a los datos que se obtiene de la api rest
 quedanto inicialmente de la siguiente manera:
-![](imagenes/imagen1)
+![](imagenes/imagen1.png)
 
 para luego de apretar los botones de mostrar tanto de clientes como de instructor asincronamente nos muestra los nombres requeridos
-[](imagenes/imagen2)
+![](imagenes/imagen2.png)
+
+La api rest queda de la siguiente manera 
+![](imagenes/imagen2.png)
+
