@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>title</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      // A $( document ).ready() block.
+      $(document).ready(function () {
+        console.log("ready!");
+
+        var dt = new Date();
+        var time = dt.getHours() + ":" + dt.getMinutes() + ":" + dt.getSeconds();
+        
+        $('#jqueryDate').text(dt);
+        $('#jqueryTime').text(time);
+
+    });
+    </script>
+  </head>
+  <body>
+    <p id="jqueryTime"></p>
+    <p id="jqueryDate"></p>
+    <!-- page content -->
+  </body>
+</html>
