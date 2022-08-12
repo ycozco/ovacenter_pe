@@ -1,5 +1,5 @@
-from tkinter import W
 from django.db import models
+from rest_framework import serializers
 
 # Create your models here.
 
@@ -19,3 +19,7 @@ class Cliente_Evento(models.Model):
     CliEveFecDiaHorIni = models.CharField(max_length=100)
     CliEveFecDiaHorFin = models.CharField(max_length=100)
     CliEveEst = models.CharField(max_length=100)
+class EventoSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Evento
+        fields = ['EveCod','EveNom','EveFecDiaHorIni','EveFecDiaHorFin','EveInsCod','EvePre',]
