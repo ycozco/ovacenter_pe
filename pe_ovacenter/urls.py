@@ -20,11 +20,14 @@ from django.urls import path, include
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
 from Apps.Users.views import ClienteViewSet,InstructorViewSet
+from Apps.Eventos.views import EventosViewSet
 from inicio.views import Inicio
 
 router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
 router.register(r'instructor', InstructorViewSet)
+router.register(r'eventos', EventosViewSet)
+
 urlpatterns = [
     path('datos' ,Inicio, name = "inicio"),
     path('', include(router.urls)),
