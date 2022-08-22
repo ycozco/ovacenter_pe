@@ -1,4 +1,4 @@
-from tkinter import W
+
 from django.contrib import admin
 from .models import Membresia, Venta ,Gastos
 # Register your models here.
