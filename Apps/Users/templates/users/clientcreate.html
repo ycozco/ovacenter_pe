@@ -1,38 +1,9 @@
-
-{% extends 'base.html' %}
-
-{% block head%}
+{% extends 'base.html' %} {% block head%}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-function changeUserType(){
-    var cliente = `
-        <form method="POST"> {% csrf_token %}
-            {{ formCliente.as_p }}
-        <input type="submit" value="guardar">
-        </form>
-    `
-    var instructor = `
-    
-    <form method="POST"> {% csrf_token %}
-        {{ formInstructor.as_p }}
-        <input type="submit" value="guardar">
-    </form>
-    `
-    
-    var x = document.getElementById("userType").value;
-    if(x.equals(Cliente))
-        document.getElementById("form").innerHTML = cliente;
-    else 
-        document.getElementById("form").innerHTML = instructor;
-    }
-
-
 </script>
 
-{% endblock %}
-
-
-{% block body %}
+{% endblock %} {% block body %}
 <form action="">
   <label for="userType">Choose User Type</label>
   <select name="userType" id="userType" onchange="changeUserType(this.value)">
@@ -40,6 +11,16 @@ function changeUserType(){
     <option value="Intructor">Instructor</option>
   </select>
 </form>
+<form method="POST">
+  {% csrf_token %} {{ formInstructor.as_p }}
+  <input type="submit" value="guardar" />
+</form>
+
+<form method="POST">
+  {% csrf_token %} {{ formCliente.as_p }}
+  <input type="submit" value="guardar" />
+</form>
+
 <p id="form"></p>
 
 {% endblock %}
