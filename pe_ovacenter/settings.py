@@ -100,11 +100,21 @@ WSGI_APPLICATION = 'pe_ovacenter.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#DATABASES = {
+    #'default': {
+   #     'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': BASE_DIR / 'db.sqlite3',
+ #   }
+#}
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+            'default':{
+                'ENGINE':'django.db.backends.postgresql_psycopg2',
+                'NAME':'ddbshqap22k4vl',
+                'USER':'butyqrdxdisfvo',
+                'PASSWORD':'908d7368d1202668c3fffc7dd45a43ae3a578d253b162446d2eacf8dd88d6c54',
+                'HOST':'ec2-34-235-198-25.compute-1.amazonaws.com',
+                'PORT':'5432',
+            }
 }
 
 MAX_CONN_AGE = 600
