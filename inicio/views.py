@@ -9,4 +9,4 @@ def Inicio(request):
     context = {
         'clilist' : clilist 
     }
-    return render(request,'Cliente.html', context)    
+    return render(request,'index.html', context)    
