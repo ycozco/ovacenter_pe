@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 IS_HEROKU = "DYNO" in os.environ
 
 # Generally avoid wildcards(*). However since Heroku router provides hostname validation it is ok
-if IS_HEROKU:
+ALLOWED_HOSTS = ['https://pe-ovacenter-test-01.herokuapp.com']
+#if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
-else:
+#else:
     ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
