@@ -28,7 +28,7 @@ ALLOWED_HOSTS = ['https://pe-ovacenter-test-01.herokuapp.com']
 #if IS_HEROKU:
     ALLOWED_HOSTS = ["*"]
 #else:
-    ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if not IS_HEROKU:
