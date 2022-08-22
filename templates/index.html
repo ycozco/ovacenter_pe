@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +20,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.min.css" rel="stylesheet">
+    <link href="{% static 'ovagym/css/style.min.css' %}" rel="stylesheet">
 </head>
 
 <body class="bg-white">
@@ -57,6 +59,8 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img class="w-100" src="img/carousel-1.jpg" alt="Image">
+                    <h3> image to bot</h3>
+                    <img src="{% static 'ovagym/img/carousel-1.jpg' %}" alt="home" />
                     <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
                         <h3 class="text-primary text-capitalize m-0">Gym & Fitness Center</h3>
                         <h2 class="display-2 m-0 mt-2 mt-md-4 text-white font-weight-bold text-capitalize">Best Gym In Town</h2>
