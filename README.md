@@ -232,6 +232,24 @@
 | EveInsCod | Numerico | No | No | Ninguno | Evento instructor codigo |
 | EvePri | Cadena | No | No | Ninguno | Evento precio |
 
+| Clientes_rutinas | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| CliRutCliCod  | Numerico| No | Si | Ninguno | Cliente rutinas cliente codigo |
+| CliRutInsCod | Cadena | No | No | Ninguno | Cliente rutionas instructor codigo |
+| CliRutDatDay | Cadena | No | No | Ninguno | Cliente rutinas fecha dia |
+| CliRutSta | Numerico | No | No | Ninguno | Cliente rutinas estado (no realizado, en proceso, realizado) |
+
+| Clientes_eventos | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| CliEveCod  | Numerico| No | Si | Ninguno | Cliente eventos codigo |
+| CliEveCliCod | Cadena | No | No | Ninguno | Cliente eventos cliente codigo |
+| CliEveInsCod | Cadena | No | No | Ninguno | Cliente eventos instructor codigo |
+| CliEveDatDay | Numerico | No | No | Ninguno | Cliente eventos fecha dia |
+| CliEveDatDayHouIni | Numerico | No | No | Ninguno | Cliente eventos Fecha dia hora inicio |
+| CliEveDatDayHouEnd | Cadena | No | No | Ninguno | Cliente eventos Fecha dia hora fin |
+| CliEveSta | Cadena | No | No | Ninguno | Cliente eventos Estado (no realizado, en proceso, realizado) |
 
 
 ##  Diagrama Entidad-Relación
