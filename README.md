@@ -133,7 +133,7 @@
 
 ##  Diccionario de datos
 
-    En la construcción de software y en el diccionario de datos sobre todo se recomienda y se utilizará el idioma inglés para especificar objetos, atributos, etc.
+    Diccionario de datos OvaCenter GYM:
 
 | Clientes | | | | | |
 | -- | -- | -- | -- | -- | -- |
@@ -145,23 +145,46 @@
 | CliNumPho  | Numerico | No | No | Ninguno | Cliente numero de telefono |
 | CliTipDoc  | Cadena | No | No | Ninguno | Cliente tipo de documento |
 | CliDatBir  | Fecha | No | No | Ninguno | Cliente fecha de cumpleanos |
-| CliDigFin  | Cadena| Si | No | null | Cliente huella digital |
+| CliDigFin  | Cadena| Si | No | NULL | Cliente huella digital |
 | CliMemCod  | Numerico| No | No | Ninguno | Cliente Membresia codigo |
 | CliMemIni  | Fecha| No | No | Ninguno | Cliente Membresia inicio |
 | CliMemEnd  | Fecha| No | No | Ninguno | Cliente Membresia Fin |
 
 
 
-
-
-| Teacher | | | | | |
+| Ventas | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name | Cadena| No | No | Ninguno | Nombres |
-| email | Cadena| No | No | Ninguno | Correo electrónico |
-| gender | Fecha| Si | No | NULL | Fecha de nacimiento |
-...
+| VenCod  | Numerico| No | Si | Ninguno | Codigo venta |
+| VenProCod | Numerico | No | No | Ninguno | Venta Producto Codigo |
+| VenCliCod | Numerico | No | No | Ninguno | Venta Cliente codigo |
+| VenForPayCod | Numerico | No | No | Ninguno | venta Pago codigo |
+| VenForPayCod | Fecha| No | No | Ninguno | Venta fecha |
+
+| Productos | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| ProCod  | Numerico| No | Si | Ninguno | Producto codigo |
+| ProNam | Cadena | No | No | Ninguno | Producto nombre |
+| ProCantSto | Numerico | No | No | Ninguno | Producto cantidad stock |
+| ProNumCodBar | Numerico | No | No | Ninguno | Producto numero codigo de barras |
+| ProLinIma | Cadena| No | No | Ninguno | Producto link imagen |
+| ProUniPri | Numerico| No | No | Ninguno | Producto Precio unitario |
+
+| Instructores | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| InsCod  | Numerico| No | Si | Ninguno | Instructor codigo |
+| InsNam | Cadena | No | No | Ninguno | Instructor nombre |
+| InsEma | Cadena | No | No | Ninguno | Instructor Email |
+| InsPas | Cadena | No | No | Ninguno | Instructor Password |
+| InsTipDoc | Cadena | No | No | Ninguno | Instructor tipo documento|
+| InsNumDoc | Numerico | No | No | Ninguno | Instructor numero de documento |
+| InsNumPho | Numerico | No | No | Ninguno | Instructor numero telefono |
+| InsDatBir | Fecha | No | No | Ninguno | Instructor Fecha cumpleanos |
+| InsDigFin | Cadena| Si | No | NULL | Instructor huella digital |
+| InsFecIni | Fecha| No | No | Ninguno | Instructor fecha inicio |
+
 
 ##  Diagrama Entidad-Relación
     ...
