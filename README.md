@@ -135,12 +135,24 @@
 
     En la construcción de software y en el diccionario de datos sobre todo se recomienda y se utilizará el idioma inglés para especificar objetos, atributos, etc.
 
-| Course | | | | | |
+| Clientes | | | | | |
 | -- | -- | -- | -- | -- | -- |
 | Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
-| code  | Numerico| No | Si | Ninguno | Código |
-| name  | Cadena| No | No | Ninguno | Nombre |
-...
+| CliCod  | Numerico| No | Si | Ninguno | Codigo de clientes |
+| CliNam  | Cadena| No | No | Ninguno | Cliente nombre |
+| CliEma  | Cadena| No | No | Ninguno | Cliente email |
+| CliPas  | Cadena| No | No | Ninguno | Cliente contrasena |
+| CliNumPho  | Numerico | No | No | Ninguno | Cliente numero de telefono |
+| CliTipDoc  | Cadena | No | No | Ninguno | Cliente tipo de documento |
+| CliDatBir  | Fecha | No | No | Ninguno | Cliente fecha de cumpleanos |
+| CliDigFin  | Cadena| Si | No | null | Cliente huella digital |
+| CliMemCod  | Numerico| No | No | Ninguno | Cliente Membresia codigo |
+| CliMemIni  | Fecha| No | No | Ninguno | Cliente Membresia inicio |
+| CliMemEnd  | Fecha| No | No | Ninguno | Cliente Membresia Fin |
+
+
+
+
 
 | Teacher | | | | | |
 | -- | -- | -- | -- | -- | -- |
