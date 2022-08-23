@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     'Apps.Rutinas',
     'Apps.Transacciones',
     'inicio',
+    'Api',
 ]
 
 MIDDLEWARE = [
