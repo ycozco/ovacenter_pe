@@ -119,14 +119,17 @@
 ##  Modelo de datos
     El modelo de datos esta conformado por las siguientes entidades.
 
-    -   Curso : En esta entidad se almacena la información de los cursos o asignaturas que se imparten en una Escuela Profesional. Ejemplo: Programación Web 2, III semestre, 02 horas teóricas, 04 horas de laboratorio, etc..
-    -   Profesor : En esta entidad se almacena los datos de los profesores que se responsabilizan del avance académico en la enseñanza de los temas planificados en cada curso. Ejemplo: Richart Escobedo, rescobedoq@unsa.edu.pe, Magister, etc.
-    - Clientes : 
-    - Instructores :
-    - Eventos : 
-    - Rutinas :
-    - Membresias : 
-   
+    -  Clientes : En esta entidad se almacena la información de los clientes que se registran en el sistema. Ejemplo: Juan Perez, contrasena, telefono, dni, fecha cumpleanos, etc.
+    -  Instructores : En esta entidad se almacena la información de los instructores que se responsabilizan de la enseñanza de los cursos. Ejemplo: Juan Perez, contrasena, telefono, dni, fecha cumpleanos, etc.
+    -  Eventos : En esta entidad se almacena informacion sobre los eventos proximos a realizarse. Ejemplo: Danza, fecha, hora, lugar, etc.
+    -  Rutinas : En esta entidad se almacena informacion sobre las rutinas que se realizan en el gimnasio. Ejemplo: brazos, repeticiones, peso,usuario, etc.
+    -  Membresias : En esta entidad se almacena informacion sobre las membresias disponibles en el gimnasio. Ejemplo: basica, duracion, precio, etc.
+    -  Ventas : En esta entidad se almacena informacion sobre las ventas que se realizan en el gimnasio. Ejemplo: usuario, producto, fecha, tipo_pago, precio, etc.
+    -  Productos : En esta entidad se almacena informacion sobre los productos disponibles en el modulo de venta. Ejemplo: producto, nombre, cantidad, precio, etc.
+    -  FormaPagos : En esta entidad se almacena informacion sobre las formas de pago aceptadas. Ejemplo: codigo, izzipay, yape, plin, etc.
+    -  Gastos : En esta entidad se almacena informacion relacionada a los gastos(salidas). Ejemplo: pago_luz, codigo, fecha, etc.
+    -  ClientesRutinas : En esta entidad se almacena informacion relacionada a las rutinas que se realizan a los clientes. Ejemplo: cliente, rutina, fecha, etc.
+    -  ClientesEventos : En esta entidad se almacena informacion relacionada a los eventos que se realizan a los clientes. Ejemplo: cliente, evento, fecha, etc.
 
 ##  Diccionario de datos
 
