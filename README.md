@@ -275,8 +275,13 @@ La api rest queda de la siguiente manera
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
+<<<<<<< HEAD
     Demo online:
     URL: ...
+=======
+    Demo online: https://www.free-css.com/free-css-templates/page276/gymnast 
+    [URL: ](https://www.free-css.com/free-css-templates)
+>>>>>>> parent of be2b200 (test code in md)
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
     ...
