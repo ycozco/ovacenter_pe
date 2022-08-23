@@ -361,8 +361,13 @@ class RawInstructorForm(forms.Form):
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
+<<<<<<< HEAD
     Demo online: https://www.free-css.com/free-css-templates/page276/gymnast 
     URL: https://www.free-css.com/free-css-templates
+=======
+    Demo online:
+    URL: ...
+>>>>>>> parent of 7fc0696 (link)
 
     
 
