@@ -261,8 +261,8 @@
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
-    Demo online:
-    URL: ...
+    Demo online: https://www.free-css.com/free-css-templates/page276/gymnast 
+    [URL: ](https://www.free-css.com/free-css-templates)
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
     ...
