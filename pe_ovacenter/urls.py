@@ -19,7 +19,7 @@ from django.urls import path, include
 
 from django.contrib.auth.models import User
 from rest_framework import routers, serializers, viewsets
-from Apps.Users.views import ClienteViewSet,InstructorViewSet
+#from Apps.Users.views import ClienteViewSet,InstructorViewSet
 from inicio.views import Inicio
 
 router = routers.DefaultRouter()
