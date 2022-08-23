@@ -185,6 +185,54 @@
 | InsDigFin | Cadena| Si | No | NULL | Instructor huella digital |
 | InsFecIni | Fecha| No | No | Ninguno | Instructor fecha inicio |
 
+| FormaPagos | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| ForPayCod | Numerico | No | Si | Ninguno | Pago codigo |
+| ForPayNam | Cadena | No | No | Ninguno | Pago nombre |
+
+
+| Membresias | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| MemCod  | Numerico| No | Si | Ninguno | Membresia codigo |
+| MemNam | Cadena | No | No | Ninguno | Membresia Nombre |
+| MemDes | Cadena | No | No | Ninguno | Membresia descripcion |
+| MemQuaMon | Numerico | No | No | Ninguno | Membresia Cantidad de meses |
+| MemPri | Numerico | No | No | Ninguno | Membresia precio |
+
+
+| Gastos | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| GasCod  | Numerico| No | Si | Ninguno | Gasto codigo |
+| GasNam | Cadena | No | No | Ninguno | Gasto nombre |
+| GasForPayCod | Numerico | No | No | Ninguno | Gasto pago codigo |
+| GasDes | Cadena | No | No | Ninguno | Gasto descripcion |
+| GasDat | Fecha | No | No | Ninguno | Gasto fecha |
+
+
+| Rutinas | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| RutCod  | Numerico| No | Si | Ninguno | Rutina codigo |
+| RutNam | Cadena | No | No | Ninguno | Rutina nombre |
+| RutChaWei | Cadena | No | No | Ninguno | Rutina carga peso |
+| RutNumRep | Numerico | No | No | Ninguno | Rutina numero de repeticiones |
+| RutInsCod | Numerico | No | No | Ninguno | Rutina instructor codigo |
+| RutDes | Cadena | No | No | Ninguno | Rutina descripcion |
+
+| Eventos | | | | | |
+| -- | -- | -- | -- | -- | -- |
+| Atributo  | Tipo  | Nulo | Clave | Predeterminado | Descripción |
+| EveCod  | Numerico| No | Si | Ninguno | Evento codigo |
+| EveNam | Cadena | No | No | Ninguno | Evento Nombre |
+| EveDatDayHouIni | Cadena | No | No | Ninguno | Evento fecha dia hora Inicio |
+| EveDatDayHouEnd | Numerico | No | No | Ninguno | Evento fecha dia hora fin |
+| EveInsCod | Numerico | No | No | Ninguno | Evento instructor codigo |
+| EvePri | Cadena | No | No | Ninguno | Evento precio |
+
+
 
 ##  Diagrama Entidad-Relación
     ...
