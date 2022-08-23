@@ -79,22 +79,39 @@
 ##  Requisitos del sistema
     El sistema debe satisfacer los siguientes requisitos funcionales y no funcionales:
 
-    - RQ 01 registro de usuarios :  El sistema debe tener un panel de registro  de usuarios. El sistema debe mostrar al registrar un usuario los datos básicos de registro.
-    - RQ 02 administracion de usuarios: El sistema debe presentar información completa de los usuarios, Información personal del usuario , tabla de deudas relacionadas al usuario, información completa de la membresía (expiración), clases ,rutinas.
-    - RQ 03 registro de clases : El sistema debe tener un panel de registro de clases. El sistema debe mostrar al registrar una clase los datos básicos de registro.
-    - RQ 04 registro de rutinas : El sistema debe tener un panel de registro de rutinas. El sistema debe mostrar al registrar una rutina los datos básicos de registro.
+    - RQ 01 registro de usuarios :  El sistema debe tener un panel de registro  de usuarios. El sistema debe mostrar 
+    al registrar un usuario los datos básicos de registro.
+    - RQ 02 administracion de usuarios: El sistema debe presentar información completa de los usuarios, Información 
+    personal del usuario , tabla de deudas relacionadas al usuario, información completa de la membresía (expiración), clases ,rutinas.
+    - RQ 03 registro de clases : El sistema debe tener un panel de registro de clases. El sistema debe mostrar al 
+    registrar una clase los datos básicos de registro.
+    - RQ 04 registro de rutinas : El sistema debe tener un panel de registro de rutinas. El sistema debe mostrar al 
+    registrar una rutina los datos básicos de registro.
     - RQ 05 Uso de tecnologías: El sistema estará construido usando las tecnologías Django, HTML, CSS, JavaScript, SQL.
-    - RQ 06 Panel de vistas para usuarios: Los usuarios podrán visualizar su información,  Tablas usuarios, membresía, clases, rutinas relacionadas con sí mismos, todos estos campos siendo no editables (posible funcionalidad) contactar con instructores, solicitar clases, rutinas, membresías.
+    - RQ 06 Panel de vistas para usuarios: Los usuarios podrán visualizar su información,  Tablas usuarios, membresía, 
+    clases, rutinas relacionadas con sí mismos, todos estos campos siendo no editables (posible funcionalidad) 
+    contactar con instructores, solicitar clases, rutinas, membresías.
     - RQ 07 Generar reportes: Generar reportes de todos los usuarios activos de acuerdo a petición del cliente.
-    - RQ 08 Punto de venta: La página de venta deberá permitirnos seleccionar la opción de venta ( libre, usuario) tipo de pago ( contado, deuda(usuario),izzipay,yape,plin )  La deuda sólo podrá buscar y seleccionar usuarios previamente registrados.
-    - RQ 09 Registro de inventario tienda: El sistema deberá permitir el registro de nuevos productos de la tienda id,código de barras, nombre, características, cantidad, precio, etc.
+    - RQ 08 Punto de venta: La página de venta deberá permitirnos seleccionar la opción de venta ( libre, usuario) 
+    tipo de pago ( contado, deuda(usuario),izzipay,yape,plin )  La deuda sólo podrá buscar y seleccionar usuarios previamente registrados.
+    - RQ 09 Registro de inventario tienda: El sistema deberá permitir el registro de nuevos productos de la tienda 
+    id,código de barras, nombre, características, cantidad, precio, etc.
     - RQ 10 Control de asistencia de usuarios: El sistema debera permitir llevar registro de asistencias.
-    - RQ 11 Asignación de rutinas de instructores a usuarios establecidos: El sistema permitirá a los administradores/instructores mandar rutinas a los usuarios directamente.
-    - RQ 12 Despliegue de la aplicación y base de datos: Se desplegará inicialmente en la plataforma Heroku usando una base de datos relacional.
-    - RQ 13 Creación de promociones suscripción por semanas o meses: El sistema debe permitir crear promociones con nuevos planes, estos planes se pueden acceder temporalmente.
-    - RQ 14 Panel administrador filtrado por usuarios con cumpleanos cercanos: El sistema debe tener una página donde se muestre la información de los usuarios próximos a cumplir años, mostrar información: nombre, tipo membresia, fecha_fin, fecha_ini, fecha cumpleanos, deudas.
-    - RQ 15 Panel administrador filtrado por usuarios con membresías próximas a vencer: El sistema debe tener una página que muestre una lista filtrada por usuarios con sus membresías próximas a vencer, emitir alertas a los usuarios si es que les falta una semana en sus membresías.
-    - RQ 16 Reportes diarios, semanal, mensual sobre las ventas: El sistema deberá permitir emitir reportes diarios, semanales, mensuales. filtrado por ventas:( usuario, producto,fecha,tipo_pago,precio) emitir totales por ventas_contado,ventas_yape,ventas_deuda,ventas_plin, membresías.
+    - RQ 11 Asignación de rutinas de instructores a usuarios establecidos: El sistema permitirá a los administradores/
+    instructores mandar rutinas a los usuarios directamente.
+    - RQ 12 Despliegue de la aplicación y base de datos: Se desplegará inicialmente en la plataforma Heroku usando 
+    una base de datos relacional.
+    - RQ 13 Creación de promociones suscripción por semanas o meses: El sistema debe permitir crear promociones 
+    con nuevos planes, estos planes se pueden acceder temporalmente.
+    - RQ 14 Panel administrador filtrado por usuarios con cumpleanos cercanos: El sistema debe tener una página 
+    donde se muestre la información de los usuarios próximos a cumplir años, mostrar información: nombre, tipo membresia, 
+    fecha_fin, fecha_ini, fecha cumpleanos, deudas.
+    - RQ 15 Panel administrador filtrado por usuarios con membresías próximas a vencer: El sistema debe tener una 
+    página que muestre una lista filtrada por usuarios con sus membresías próximas a vencer, emitir alertas a los 
+    usuarios si es que les falta una semana en sus membresías.
+    - RQ 16 Reportes diarios, semanal, mensual sobre las ventas: El sistema deberá permitir emitir reportes diarios,
+     semanales, mensuales. filtrado por ventas:( usuario, producto,fecha,tipo_pago,precio) emitir totales por 
+     ventas_contado,ventas_yape,ventas_deuda,ventas_plin, membresías.
     - RQ 17 Manejo de gastos: El sistema debe permitir el ingreso de gastos (pago  personal, pago servicios, otros).
 
 
