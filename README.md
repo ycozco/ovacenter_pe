@@ -1,4 +1,3 @@
-## OVACENTER_PE
 <div align="center">
 <table>
     <theader>
@@ -31,18 +30,23 @@
 </theader>
 <tbody>
 <tr><td>ASIGNATURA:</td><td colspan="5">Programación Web 2</td></tr>
-<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Django projecto final </td></tr>
+<tr><td>TÍTULO DE LA PRÁCTICA:</td><td colspan="5">Django</td></tr>
 <tr>
-<td>NÚMERO DE PRÁCTICA:</td><td>14</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
+<td>NÚMERO DE PRÁCTICA:</td><td>05</td><td>AÑO LECTIVO:</td><td>2022 A</td><td>NRO. SEMESTRE:</td><td>III</td>
 </tr>
 <tr>
-<td>FECHA INICIO::</td><td>Jul-2022</td><td>FECHA FIN:</td><td>23-Aug-2022</td><td>DURACIÓN:</td><td>04 horas</td>
+<td>FECHA INICIO::</td><td>30-May-2022</td><td>FECHA FIN:</td><td>03-Jun-2022</td><td>DURACIÓN:</td><td>04 horas</td>
 </tr>
 <tr><td colspan="6">RECURSOS:
     <ul>
         <li>https://www.w3schools.com/python/python_reference.asp</li>
         <li>https://docs.python.org/3/tutorial/</li>
+        <li>https://developer.mozilla.org/es/docs/Learn/Server-side/Django/Models</li>
+        <li>https://tutorial.djangogirls.org/es/django_models/</li>
+        <li>https://pear.php.net/manual/en/standards.php</li>
+        <li>https://docs.djangoproject.com/en/4.0/</li>
 
+    </ul>
 </td>
 </<tr>
 <tr><td colspan="6">INTEGRANTES:
@@ -61,22 +65,30 @@
 </tdbody>
 </table>
 
+## Solucion y Resultados
 
-#   WebApp con Django
+El Programa constra de las principales urls
 
+```
+router.register(r'cliente', ClienteViewSet)
+router.register(r'instructor', InstructorViewSet)
+urlpatterns = [
+    path('datos' ,Inicio, name = "inicio"),
+    path('', include(router.urls)),
+    path('admin/', admin.site.urls),
+    path('ovagym/', include('ovagym.urls')),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+```
 
-[![Git][Git]][git-site]
-[![GitHub][GitHub]][github-site]
-[![Vim][Vim]][vim-site]
+donde datos(http://127.0.0.1:8000/datos) corresponde a los datos que se obtiene de la api rest
+quedanto inicialmente de la siguiente manera:
+![](imagenes/imagen1.png)
 
-##  Tipo de Sistema
-    Se trata de una aplicación web construida con el framework Django 4, un sistema que permite la administracion
-    de usuarios de un gimnasio, con la finalidad de que los usuarios puedan registrarse, ingresar y salir de un
-    gimnasio. Puedan darle el seguimiento a sus rutinas, establecer contacto con sus instructores, revisar las
-    actividades que realiza el gimnasio y mucho mas.
+para luego de apretar los botones de mostrar tanto de clientes como de instructor asincronamente nos muestra los nombres requeridos
+![](imagenes/imagen2.png)
 
-##  Requisitos del sistema
-    El sistema debe satisfacer los siguientes requisitos funcionales y no funcionales:
+La api rest queda de la siguiente manera 
+![](imagenes/imagen2.png)
 
     - RQ 01 registro de usuarios :  El sistema debe tener un panel de registro  de usuarios. El sistema debe mostrar 
     al registrar un usuario los datos básicos de registro.
@@ -255,43 +267,117 @@
 ![ovaym_entity](results/ovagym_entity.png)
 
 ##  Administración con Django
-    creacion de proyecto Django
+    Se muestran los pasos realizados para crear el Proyecto, la aplicación, creacion de modelos, migraciones y habilitación del panel de administración en Django.
+    ...
+    Creacion de proyecto Django
 
-    ##  Instalación de Django
+##  Instalación de Django
 
-    ```bash
-    pip install django
-    ```
+```bash
+pip install django
+```
 
-    ##  Creación de proyecto
-    ```bash
-    django-admin startproject ovagym
-    ```
-    ##  Creación de modelos
-    ```bash
-    python manage.py makemigrations
-    ```
-    ##  Ejecución de migraciones
-    ```bash
-    python manage.py migrate
-    ```
-    ##  Creación de superusuario
-    ```bash
-    python manage.py createsuperuser
-    ```
-    ##  Ejecución del servidor
-    ```bash
-    python manage.py runserver
-    ```
-    
+##  Creación de proyecto
+
+```bash
+
+django-admin startproject ovagym
+```
+##  Creación de modelos
+
+```bash
+python manage.py makemigrations
+```
+##  Ejecución de migraciones
+
+```bash
+python manage.py migrate
+```
+##  Creación de superusuario
+
+```bash
+python manage.py createsuperuser
+```
+##  Ejecución del servidor
+
+```bash
+python manage.py runserver
+```
+Creacion de formulario 
+
+```python
+
+from django import forms
+from .models import Cliente
+
+BIRTH_YEAR_CHOICES = ['1980', '1981', '1982','1983']
+DOCUMENT_CHOICES = ['Document', 'PASSPORT']
+
+class RawClienteForm(forms.Form):
+    CliNom = forms.CharField(
+        initial='name',
+        max_length=100,
+        label='Name',
+    )
+    CliEma = forms.EmailField(
+        label='Email',
+    )
+    CliPas = forms.CharField(
+        label='Password',
+        max_length=100,
+        widget=forms.PasswordInput(),
+        )
+    CliNumTel = forms.IntegerField(
+        label='CellPhone',
+        widget=forms.NumberInput(
+        )
+    )
+    CliTipDoc = forms.CharField(
+        label='Document Type',
+    )
+    CliNumDoc = forms.IntegerField(
+        label='Document Num',
+    )
+    CliFecCum = forms.DateField(
+        label='Date Birthday', 
+        widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES),
+        )
+    CliHueDig = forms.ImageField(
+        label='Huella Digital',
+    )
+    CliMemCod = forms.IntegerField(
+        label='Membresia Number',
+    )
+    CliMemIni = forms.DateField(
+        label='Membresia Inicio',
+        widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES),
+    )
+    CliMemFin = forms.DateField(
+        label='Menbresia Fin',
+        widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES),
+    )
+
+class RawInstructorForm(forms.Form):
+    InsCod = forms.IntegerField()
+    InsNom = forms.CharField(max_length=100)
+    InsEma = forms.EmailField()
+    InsPas = forms.CharField(max_length=100)
+    InsTipDoc = forms.IntegerField()
+    InsNumDoc = forms.IntegerField()
+    InsNumTel = forms.IntegerField()
+    InsFecCum = forms.DateField()
+    InsHueDig = forms.ImageField()
+    InsFecIni = forms.DateField()
+```
 
 ##  Plantillas Bootstrap
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
-    Demo online: https://www.free-css.com/free-css-templates/page276/gymnast 
-    URL: https://www.free-css.com/free-css-templates
+    Demo online:
+    URL: ...
 
-    
+    Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
+    ...
 
 ##  CRUD - Core Business - Clientes finales
     El núcleo de negocio del sistema de inscripciones tiene valor de aceptación para los cliente finales (alumnos) radica en realizar el proceso de inscripción propiamente, que empieza desde que:
