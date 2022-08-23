@@ -68,6 +68,7 @@
 [![Git][Git]][git-site]
 [![GitHub][GitHub]][github-site]
 [![Vim][Vim]][vim-site]
+[![Java][Java]][java-site]
 
 ##  Tipo de Sistema
     Se trata de una aplicación web construida con el framework Django 4, un sistema que permite la administracion
@@ -252,7 +253,7 @@
 
 
 ##  Diagrama Entidad-Relación
-![ovaym_entity](results/ovagym_entity.png)
+    ...
 
 ##  Administración con Django
     Creacion de proyecto Django
