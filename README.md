@@ -65,33 +65,12 @@
 </tdbody>
 </table>
 
-## Solucion y Resultados
 
-El Programa constra de las principales urls
 
-```
-router.register(r'cliente', ClienteViewSet)
-router.register(r'instructor', InstructorViewSet)
-urlpatterns = [
-    path('datos' ,Inicio, name = "inicio"),
-    path('', include(router.urls)),
-    path('admin/', admin.site.urls),
-    path('ovagym/', include('ovagym.urls')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
-```
+## Tipo de sistema
+    - Se trata de una aplicación web construida con el framework Django 4, un sistema que permite la administracion de usuarios de un gimnasio, con la finalidad de que los usuarios puedan registrarse, ingresar y salir de un gimnasio. Puedan darle el seguimiento a sus rutinas, establecer contacto con sus instructores, revisar las actividades que realiza el gimnasio y mucho mas.
 
-donde datos(http://127.0.0.1:8000/datos) corresponde a los datos que se obtiene de la api rest
-quedanto inicialmente de la siguiente manera:
-![](imagenes/imagen1.png)
-
-para luego de apretar los botones de mostrar tanto de clientes como de instructor asincronamente nos muestra los nombres requeridos
-![](imagenes/imagen2.png)
-
-La api rest queda de la siguiente manera 
-![](imagenes/imagen2.png)
-
-<<<<<<< HEAD
-=======
+## Requisitos del Sistema 
     - RQ 01 registro de usuarios :  El sistema debe tener un panel de registro  de usuarios. El sistema debe mostrar 
     al registrar un usuario los datos básicos de registro.
     - RQ 02 administracion de usuarios: El sistema debe presentar información completa de los usuarios, Información 
@@ -270,18 +249,42 @@ La api rest queda de la siguiente manera
 
 ##  Administración con Django
     Se muestran los pasos realizados para crear el Proyecto, la aplicación, creacion de modelos, migraciones y habilitación del panel de administración en Django.
-    ...
+    
+    creacion de proyecto Django
+
+###  Instalación de Django
+
+```bash
+pip install django
+```
+
+###  Creación de proyecto
+```bash
+django-admin startproject ovagym
+```
+###  Creación de modelos
+```bash
+python manage.py makemigrations
+```
+###  Ejecución de migraciones
+```bash
+python manage.py migrate
+```
+###  Creación de superusuario
+```bash
+python manage.py createsuperuser
+```
+###  Ejecución del servidor
+```bash
+python manage.py runserver
+```
 
 ##  Plantillas Bootstrap
+
     Se seleccionó la siguiente plantilla para el usuario final (No administrador).
 
-<<<<<<< HEAD
-    Demo online:
-    URL: ...
-=======
     Demo online: https://www.free-css.com/free-css-templates/page276/gymnast 
-    [URL: ](https://www.free-css.com/free-css-templates)
->>>>>>> parent of be2b200 (test code in md)
+    URL: https://www.free-css.com/free-css-templates
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
     ...
@@ -369,4 +372,4 @@ etc…
 [![License][license]][license-file]
 [![Downloads][downloads]][releases]
 [![Last Commit][last-commit]][releases]
->>>>>>> parent of 7fc0696 (link)
+
