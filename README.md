@@ -287,8 +287,88 @@ python manage.py runserver
     URL: https://www.free-css.com/free-css-templates
 
     Se muestran las actividades realizadas para adecuación de plantillas, vistas, formularios en Django.
-    ...
+### Adecuacion de plantillas 
 
+    ```html
+    {% extends 'base.html' %} {% block head%}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+    </script>
+
+    {% endblock %} {% block body %}
+    <form action="">
+     <label for="userType">Choose User Type</label>
+        <select name="userType" id="userType" onchange="changeUserType(this.value)">
+        <option value="Cliente">Cliente</option>
+        <option value="Intructor">Instructor</option>
+        </select>
+    </form>
+    <form method="POST">
+    {% csrf_token %} {{ formInstructor.as_p }}
+    <input type="submit" value="guardar" />
+        </form>
+
+        <form method="POST">
+        {% csrf_token %} {{ formCliente.as_p }}
+    <input type="submit" value="guardar" />
+        </form>
+
+    <p id="form"></p>
+
+    {% endblock %}
+    ```
+
+### Adecuacion de vistas para imagenes
+
+    ```html
+                    <div class="carousel-item active">
+                    <img src="{% static 'ovagym/img/carousel-1.jpg' %}" alt="home" />
+    ```
+   
+### Vista cliente 
+
+    ```python
+    from django.shortcuts import render
+    from django.http import HttpResponse
+    from .models import Cliente
+    from .forms import RawClienteForm,RawInstructorForm
+    # Create your views here.
+
+    def ClienteShowObject(request,myID):
+        obj = Cliente.objects.get(id = myID)
+        context = {
+         'obj':obj,
+            }
+    
+        return render(request, 'descripcion.html', context)
+
+    def UserCreateView(request):
+        formCliente = RawClienteForm()
+        formInstructor = RawInstructorForm()
+
+        if request.method == "POST":
+            formCliente = RawClienteForm(request.POST)
+            if formCliente.is_valid():
+                print(formCliente.cleaned_data)
+                Cliente.objects.create(**formCliente.cleaned_data)
+            else:
+                print(formCliente.errors)
+    
+        if request.method == "POST":
+            formInstructor = RawInstructorForm(request.POST)
+            if formInstructor.is_valid():
+                print(formInstructor.cleaned_data)
+                Cliente.objects.create(**formInstructor.cleaned_data)
+            else:
+                print(formInstructor.errors)
+    
+        context = {
+            'formCliente': formCliente,
+            'formInstructor': formInstructor,
+        }
+        return render(request, 'users/clientcreate.html',context)
+
+    ```
 ##  CRUD - Core Business - Clientes finales
     El núcleo de negocio del sistema de inscripciones tiene valor de aceptación para los cliente finales (alumnos) radica en realizar el proceso de inscripción propiamente, que empieza desde que:
     1. El alumno inicia sesión.
@@ -322,9 +402,10 @@ python manage.py runserver
     Se muestran los pasos realizados para su funcionamiento correcto.
     ...
 
-Github del proyecto:
+Github del proyecto: https://github.com/ycozco/ovacenter_pe 
+branch : vs_tp
 
-URL en Heroku:
+URL en Heroku: https://pe-ovacenter-test-01.herokuapp.com/ovagym/
 
 URL Playlist YouTube.
 Producción de un PlayList en Youtube explicando cada una de los requerimientos.
