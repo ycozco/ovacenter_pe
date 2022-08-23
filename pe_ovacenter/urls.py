@@ -17,27 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from rest_framework import routers 
-from api.views import EventosViewSet,ClienteViewSet,InstructorViewSet
+from django.contrib.auth.models import User
+from rest_framework import routers, serializers, viewsets
+from Apps.Users.views import ClienteViewSet,InstructorViewSet
 from inicio.views import Inicio
-from rest_framework.urlpatterns import format_suffix_patterns
-from Apps.Users.views import ClienteShowObject
-from api.views import Cliente_list,Cliente_detail
-from Apps.Users.views import UserCreateView
+
 router = routers.DefaultRouter()
 router.register(r'cliente', ClienteViewSet)
 router.register(r'instructor', InstructorViewSet)
-router.register(r'eventos', EventosViewSet)
-
 urlpatterns = [
-    path('' ,Inicio, name = "inicio"),
-    path('api/', include(router.urls)),
+    path('datos' ,Inicio, name = "inicio"),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
     path('ovagym/', include('ovagym.urls')),
-    path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('users/',Cliente_list,name='browsing'),
-    path('users/<int:pk>',Cliente_detail,name='browsing'),
-    path('inscription/',UserCreateView,name='inscription'),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    
 
 ]
-
